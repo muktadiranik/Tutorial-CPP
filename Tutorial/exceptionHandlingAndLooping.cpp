@@ -126,6 +126,44 @@ int main(int argc, char **argv)
     srand(time(NULL));
     int randomNumber = rand() % 100 + 1;
     cout << randomNumber << endl;
+    int guessNumber;
+
+    do
+    {
+        cout << "Guess a number between 1 and 100: ";
+        cin >> guessNumber;
+        if (guessNumber > randomNumber)
+        {
+            cout << "Too high" << endl;
+        }
+        else if (guessNumber < randomNumber)
+        {
+            cout << "Too low" << endl;
+        }
+        else
+        {
+            cout << "Correct" << endl;
+        }
+    } while (guessNumber != randomNumber);
+
+    while (true)
+    {
+        cout << "Guess a number between 1 and 100: ";
+        cin >> guessNumber;
+        if (guessNumber > randomNumber)
+        {
+            cout << "Too high" << endl;
+        }
+        else if (guessNumber < randomNumber)
+        {
+            cout << "Too low" << endl;
+        }
+        else
+        {
+            cout << "Correct" << endl;
+            break;
+        }
+    }
 
     return 0;
 }
